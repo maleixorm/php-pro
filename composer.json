@@ -3,7 +3,8 @@
     "description": "PHP-Profissional",
     "autoload": {
         "files": [
-
+            "app/helpers/constants.php",
+            "app/router/router.php"
         ],
         "psr-4": {
             "Marco\\PhpPro\\": "src/",
