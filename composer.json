@@ -1,0 +1,20 @@
+{
+    "name": "marco/php-pro",
+    "description": "PHP-Profissional",
+    "autoload": {
+        "files": [
+
+        ],
+        "psr-4": {
+            "Marco\\PhpPro\\": "src/",
+            "app\\": "app"
+        }
+    },
+    "authors": [
+        {
+            "name": "Marcos Aleixo",
+            "email": "67377101+maleixorm@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
