@@ -28,11 +28,19 @@ function params($uri, $matchedUri) {
     if (!empty($matchedUri)) {
         $matchedToGetParams = array_keys($matchedUri)[0];
         return array_diff(
-            explode('/', ltrim($uri, '/')),
+            $uri,
             explode('/', ltrim($matchedToGetParams, '/'))
         );    
     }
     return [];
+}
+
+function paramsFormat($uri, $params) {
+    $paramsData = [];
+    foreach ($params as $index => $param) {
+        $paramsData[$uri[$index-1]] = $param; 
+    }
+    return $paramsData;
 }
 
 // Função que executa e verifica as rotas do projeto
@@ -43,6 +51,8 @@ function router() {
     $matchedUri = exactMatchUriInArrayRoutes($uri, $routes);
     if (empty($matchedUri)) {
         $matchedUri = regularExpressionMatchArrayRoutes($uri, $routes);
+        $uri = explode('/', ltrim($uri, '/'));
         $params = params($uri, $matchedUri);
+        $params = paramsFormat($uri, $params);
     }
 }
