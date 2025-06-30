@@ -1,8 +1,8 @@
 <?php
 
 return [
-    '/' => 'Home@index',
-    '/user/create' => 'User@create',
-    '/user/[a-z0-9]+' => 'User@index',
-    '/user/[a-z0-9]+/name/[a-z]+' => 'User@show'
+    '/php-pro/public/' => 'Home@index',
+    '/php-pro/public/user/create' => 'User@create',
+    '/php-pro/public/user/[a-z0-9]+' => 'User@index',
+    '/php-pro/public/user/[a-z0-9]+/name/[a-z]+' => 'User@show'
 ];
