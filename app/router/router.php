@@ -1,7 +1,7 @@
 <?php
 
 function routes() {
-    return require "./routes.php";
+    return require "routes.php";
 }
 
 // Função que trabalha com as URIs exatas
@@ -9,7 +9,6 @@ function exactMatchUriInArrayRoutes($uri, $routes) {
     if (array_key_exists($uri, $routes)) {
         return [$uri => $routes[$uri]];
     }
-
     return [];
 }
 
@@ -29,8 +28,8 @@ function regularExpressionMatchArrayRoutes($uri, $routes) {
 function router() {
     $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     $routes = routes();
-    $matchedUri = exactMatchUriInArrayRoutes($uri,$routes);
+    $matchedUri = exactMatchUriInArrayRoutes($uri, $routes);
     if (empty($matchedUri)) {
-        $matchedUri = regularExpressionMatchArrayRoutes($uri,$routes);
+        $matchedUri = regularExpressionMatchArrayRoutes($uri, $routes);
     }
 }
