@@ -68,7 +68,7 @@ function router()
         return controller($matchedUri);
     }
 
-    var_dump($matchedUri);
+    // var_dump($matchedUri);
 
-    // throw new Exception('Algo deu errado!');
+    throw new Exception('Algo deu errado!');
 }
