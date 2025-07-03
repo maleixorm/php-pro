@@ -1,4 +1,4 @@
-<h2>Usuários</h2>
+<h2 class="text-center my-4">Usuários</h2>
 <div
     class="table-responsive"
 >
