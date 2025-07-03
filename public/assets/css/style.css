@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html, body {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.container {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    border: 3px solid green;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+ul#menu_list {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding: 0;
+}
+
+ul#menu_list li {
+    margin: 15px;
+}
+
+#status_login {
+    background-color: #efefef;
+}
+
+ul#users_home {
+    list-style: none;
+    padding: 0;
+}
+
+ul#users_home li {
+    background-color: aquamarine;
+    padding: 5px;
+    margin-bottom: 3px;
+}
